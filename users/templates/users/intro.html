@@ -1,0 +1,60 @@
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>introduction to devfolio</title>
+    <style>
+body {
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  text-align:center;
+}
+div{
+  padding-top:10%;
+
+
+}
+
+button{
+
+    background-color:rgb(216, 214, 214);
+    font-size:35px;
+     border-radius:12px;
+      text-align:center;
+
+
+
+}
+.back-video{
+    position:absolute;
+    right:0;
+    bottom:0;
+    z-index:-1;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+    </style>
+</head>
+<body>
+    <div >
+    <video autoplay loop muted plays-inline class="back-video">
+        <source src="{% static 'images/istockphoto-1090941318-640_adpp_is.mp4' %} " type="video/mp4">
+        </video>
+    <h1 style="font-size:8vmax; color:rgb(12, 11, 11); text-shadow: 2px 2px rgb(248, 240, 240);">Dev Hub<br>
+    <p style="font-size:3vmax; color:rgb(207, 191, 44);text-shadow: 2px 2px black;" >Platform to know about devlopers and projects...........<br>
+    <button type="button"><a href="{% url 'profiles' %}" style="text-decoration:none;color:rgb(24, 11, 11);">Explore</a></button>
+
+    </p>
+    </h1>
+    </div>
+
+
+
+</body>
+
+
+{% endblock content %}
